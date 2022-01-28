@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Email Validation Javascript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <div>
+            <h3>Email Validation Check</h3>
+            <form id='form' method='post'action='#'>
+                <div class='inputBox'>
+                    <input type='email' name=''id='text'placeholder='Enter Your Email'>
+                    <span id = 'text'></span>
+                </div>
+            </form>
+        </div>
+        <script src="" async defer>
+            function Validation(){
+                var form=document.getElementById('form');
+                var email=document.getElementById('email').value;
+                var text=document.getElementById('text').value;
+                var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (email.match(pattern)){
+                    form.classList.add('valid')
+                    form.classList.remove('invalid')
+                }
+                else{
+                    form.classsList.remove('valid')
+                }
+            }
+        </script>
+    </body>
+</html>
